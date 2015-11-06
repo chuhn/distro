@@ -1,2 +1,2 @@
-PlainFileStoreContrib/data/System /usr/share/foswiki/data
-PlainFileStoreContrib/lib         /usr/share/foswiki
+PlainFileStoreContrib/data /usr/share/foswiki
+PlainFileStoreContrib/lib  /usr/share/foswiki

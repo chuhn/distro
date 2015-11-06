@@ -10,8 +10,9 @@ Homepage: http://foswiki.org
 
 Package: foswiki-core
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl,
- foswiki-data-store | foswiki-plain-file-store-contrib
+Depends: ${perl:Depends}, ${misc:Depends}, httpd | apache2,
+ libcrypt-passwdmd5-perl, foswiki-data-store | foswiki-plain-file-store-contrib,
+ foswiki-user-mapping | foswiki-topic-user-mapping-contrib
 Recommends: foswiki-configureplugin
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
@@ -31,3 +32,23 @@ Description: Store Foswiki data using plain text files
  sophisticated than plain files and directories In the Foswiki spirit
  these files are organised in a simple and clear structure using
  intention-revealing file names.
+
+Package: foswiki-rcs-store-contrib
+Provides: foswiki-data-store
+Architecture: all
+Depends: ${misc:Depends}
+Description: The classic Foswiki RCS based data store
+ Other store implementations have emerged, and the RCS store's status as
+ "the one and only" store implementation has been eroded.
+
+Package: foswiki-topic-user-mapping-contrib
+Provides: foswiki-user-mapping
+Architecture: all
+Depends: ${misc:Depends}
+Description: maps external authentication providers to internal user IDs
+ The User Mapping Manager interface provides services for mapping between a
+ 'user identity' as used when talking to an external authentication provider,
+ an internal canonical user ID, and the displayed name used to identify the
+ user in topics. This is the default TopicUserMapping in which user information
+ is stored in topics - one per user, and then any mapping needed is done using
+ the WikiUsers topic in the Main.
