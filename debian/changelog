@@ -1,0 +1,5 @@
+foswiki (2.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Christopher Huhn, GSI <C.Huhn@gsi.de>  Fri, 06 Nov 2015 13:43:39 +0100
