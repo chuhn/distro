@@ -10,12 +10,19 @@ Homepage: http://foswiki.org
 
 Package: foswiki-core
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl
+Depends: ${perl:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl
+Recommends: foswiki-configureplugin
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
 Package: foswiki-apache2
 Architecture: all
 Depends: apache2
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: foswiki-configureplugin
+Architecture: all
+Depends: foswiki-core
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
