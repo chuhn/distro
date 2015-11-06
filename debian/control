@@ -26,7 +26,7 @@ Description: <insert up to 60 chars description>
 Package: foswiki-plain-file-store-contrib
 Provides: foswiki-data-store
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}
 Description: Store Foswiki data using plain text files
  This is a full implementation of a Foswiki store that uses nothing more
  sophisticated than plain files and directories In the Foswiki spirit
@@ -36,7 +36,7 @@ Description: Store Foswiki data using plain text files
 Package: foswiki-rcs-store-contrib
 Provides: foswiki-data-store
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}
 Description: The classic Foswiki RCS based data store
  Other store implementations have emerged, and the RCS store's status as
  "the one and only" store implementation has been eroded.
@@ -44,7 +44,7 @@ Description: The classic Foswiki RCS based data store
 Package: foswiki-topic-user-mapping-contrib
 Provides: foswiki-user-mapping
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${perl:Depends}, ${misc:Depends}
 Description: maps external authentication providers to internal user IDs
  The User Mapping Manager interface provides services for mapping between a
  'user identity' as used when talking to an external authentication provider,
