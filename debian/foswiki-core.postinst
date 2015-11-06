@@ -20,6 +20,7 @@ set -e
 
 case "$1" in
     configure)
+        chown www-data:adm /var/log/foswiki
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
