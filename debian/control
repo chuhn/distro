@@ -10,7 +10,8 @@ Homepage: http://foswiki.org
 
 Package: foswiki-core
 Architecture: all
-Depends: ${perl:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl
+Depends: ${perl:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl,
+ foswiki-data-store | foswiki-plain-file-store-contrib
 Recommends: foswiki-configureplugin
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
@@ -21,8 +22,12 @@ Depends: ${misc:Depends}, apache2
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
-Package: foswiki-configureplugin
+Package: foswiki-plain-file-store-contrib
+Provides: foswiki-data-store
 Architecture: all
-Depends: ${misc:Depends}, foswiki-core
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${misc:Depends}
+Description: Store Foswiki data using plain text files
+ This is a full implementation of a Foswiki store that uses nothing more
+ sophisticated than plain files and directories In the Foswiki spirit
+ these files are organised in a simple and clear structure using
+ intention-revealing file names.
