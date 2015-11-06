@@ -1,2 +1,4 @@
-core/lib /usr/share/foswiki/lib
-core/*   /usr/share/foswiki/www
+core/bin       /usr/share/foswiki
+core/lib       /usr/share/foswiki
+core/locale    /usr/share/foswiki
+core/templates /usr/share/foswiki
