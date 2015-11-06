@@ -1,1 +1,2 @@
-core/* /usr/share/foswiki/www
+core/lib /usr/share/foswiki/lib
+core/*   /usr/share/foswiki/www
