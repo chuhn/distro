@@ -1,5 +1,5 @@
 Source: foswiki
-Section: unknown
+Section: web
 Priority: optional
 Maintainer: Christopher Huhn, GSI <C.Huhn@gsi.de>
 Build-Depends: debhelper (>= 9)
