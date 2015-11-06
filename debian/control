@@ -10,7 +10,7 @@ Homepage: http://foswiki.org
 
 Package: foswiki-core
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, httpd
+Depends: ${shlibs:Depends}, ${misc:Depends}, httpd, libcrypt-passwdmd5-perl
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
