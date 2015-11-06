@@ -20,6 +20,11 @@ set -e
 
 case "$1" in
     configure)
+
+        # TODO: Handle upgrade/merge of existing topics
+        cp -r /usr/share/foswiki/data/Main /var/lib/foswiki/data
+        chown -R www-data:www-data /var/lib/foswiki/data
+        ln -s /usr/share/foswiki/data/System /var/lib/foswiki/data
         chown www-data:adm /var/log/foswiki
     ;;
 

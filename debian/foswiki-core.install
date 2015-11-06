@@ -1,5 +1,5 @@
 core/bin         /usr/share/foswiki
-core/data/System /usr/share/foswiki/data
+core/data        /usr/share/foswiki
 core/lib         /usr/share/foswiki
 core/locale      /usr/share/foswiki
 core/templates   /usr/share/foswiki

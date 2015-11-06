@@ -1,1 +1,2 @@
 * add logrotate.conf for foswiki-core
+* handle existing topic merge on upgrade
