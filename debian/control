@@ -13,3 +13,9 @@ Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}, httpd
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
+
+Package: foswiki-apache2
+Architecture: all
+Depends: apache2
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+#
+# This is only a stub
+#
+
+# We have to enable mod_rewrite:
+# a2enmod rewrite 
