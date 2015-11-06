@@ -4,8 +4,8 @@ Subject: Tweak default paths for Debian compliance
 
 ---
  core/bin/setlib.cfg   | 5 +----
- core/lib/Foswiki.spec | 2 +-
- 2 files changed, 2 insertions(+), 5 deletions(-)
+ core/lib/Foswiki.spec | 4 ++--
+ 2 files changed, 3 insertions(+), 6 deletions(-)
 
 diff --git a/core/bin/setlib.cfg b/core/bin/setlib.cfg
 index a99bc21..012e880 100755
@@ -29,9 +29,18 @@ index a99bc21..012e880 100755
  # Foswiki won't run at all without these:
  my %missing;
 diff --git a/core/lib/Foswiki.spec b/core/lib/Foswiki.spec
-index 3980c0a..6673a6e 100644
+index 3980c0a..c5eb524 100644
 --- a/core/lib/Foswiki.spec
 +++ b/core/lib/Foswiki.spec
+@@ -155,7 +155,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
+ # **PATH LABEL="Template Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions'" CHECK="noemptyok perms:rD" **
+ # File path to templates directory. For example =/usr/local/foswiki/templates=.
+ # This directory must not be web accessible.
+-# $Foswiki::cfg{TemplateDir} = '/home/httpd/foswiki/templates';
++$Foswiki::cfg{TemplateDir} = '/usr/share/foswiki/templates';
+ 
+ # **PATH LABEL="Locales Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions'" CHECK="noemptyok perms:rD" **
+ # File path to locale directory.
 @@ -1135,7 +1135,7 @@ $Foswiki::cfg{Log}{Implementation} = 'Foswiki::Logger::PlainFile';
  # **PATH LABEL="Log Directory"**
  # Directory where log files will be written.  Note that the Compatibility
