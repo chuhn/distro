@@ -1,1 +1,1 @@
-debian/foswiki.apache.conf /etc/foswiki/apache.conf
+debian/apache.conf /etc/foswiki
