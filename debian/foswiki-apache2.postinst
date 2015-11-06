@@ -5,4 +5,6 @@
 #
 
 # We have to enable mod_rewrite:
-# a2enmod rewrite 
+# a2enmod rewrite
+
+:
