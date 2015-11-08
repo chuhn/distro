@@ -22,11 +22,13 @@ case "$1" in
     configure)
 
         # TODO: Handle upgrade/merge of existing topics
-        cp -r /usr/share/foswiki/data/Main /var/lib/foswiki/data
+        cp -r /usr/share/foswiki/data/Main  /var/lib/foswiki/data
+        cp -r /usr/share/foswiki/working/.  /var/spool/foswiki
         test -e /var/lib/foswiki/data/System ||
             ln -s /usr/share/foswiki/data/System /var/lib/foswiki/data
-        chown -R www-data:www-data /var/lib/foswiki/data /var/log/foswiki /var/run/foswiki
+        chown -R www-data:www-data /var/lib/foswiki/data /var/log/foswiki /var/spool/foswiki
         chgrp adm /var/log/foswiki
+        chmod o-rwx  /var/spool/foswiki /var/log/foswiki /var/lib/foswiki
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

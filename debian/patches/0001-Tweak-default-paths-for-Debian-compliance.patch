@@ -3,77 +3,19 @@ Date: Fri, 6 Nov 2015 17:18:51 +0100
 Subject: Tweak default paths for Debian compliance
 
 ---
- core/bin/setlib.cfg   |  5 +----
- core/lib/Foswiki.spec | 10 +++++-----
- 2 files changed, 6 insertions(+), 9 deletions(-)
+ core/lib/Foswiki.spec | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/core/bin/setlib.cfg b/core/bin/setlib.cfg
-index a99bc21..012e880 100755
---- a/core/bin/setlib.cfg
-+++ b/core/bin/setlib.cfg
-@@ -31,15 +31,12 @@ unless (( defined ($foswikiLibPath) ) and (-e $foswikiLibPath)) {
- 	( $foswikiLibPath ) = ($foswikiLibPath = Cwd::abs_path( "$bindir../lib" )) =~ /(.*)/;
- }
- if ($foswikiLibPath eq "") {
--    $foswikiLibPath = "../lib";
--    warn "using relative path for libs - some plugins may break";
-+    $foswikiLibPath = "/usr/share/foswiki/lib";
- }
- 
- # Prepend to @INC, the Perl search path for modules
- unshift @INC, $foswikiLibPath;
- unshift @INC, @localPerlLibPath if @localPerlLibPath;
--# Append lib/CPAN/lib for absolutely needed dependencies
--push @INC, "$foswikiLibPath/CPAN/lib";
- 
- # Foswiki won't run at all without these:
- my %missing;
 diff --git a/core/lib/Foswiki.spec b/core/lib/Foswiki.spec
-index 3980c0a..7a3688e 100644
+index 7a3688e..b4c56f0 100644
 --- a/core/lib/Foswiki.spec
 +++ b/core/lib/Foswiki.spec
-@@ -90,7 +90,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
- # directory. For example =/foswiki/bin=.
- # See [[http://foswiki.org/Support/ShorterUrlCookbook][ShorterUrlCookbook]]
- # for more information on setting up Foswiki to use shorter script URLs.
--# $Foswiki::cfg{ScriptUrlPath} = '/foswiki/bin';
-+$Foswiki::cfg{ScriptUrlPath} = '/foswiki/bin';
- 
- # **STRING 10 LABEL="Script Suffix" CHECK="emptyok"**
- # Suffix of Foswiki CGI scripts. For example, .cgi or .pl.
-@@ -145,7 +145,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
- # **PATH LABEL="Data Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions';title='Validate file permissions. WARNING: this may take a long time on a large system'" CHECK="noemptyok perms:rwDpd,'(,v|,pfv)$',r" **
- # Topic files store (file path, not URL). For example =/usr/local/foswiki/data=.
- # This directory must not be web accessible. 
--# $Foswiki::cfg{DataDir} = '/home/httpd/foswiki/data';
-+$Foswiki::cfg{DataDir} = '/var/lib/foswiki/data';
- 
- # **PATH LABEL="Tools Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions'" CHECK="noemptyok perms:rD" **
- # File path to tools directory. For example =/usr/local/foswiki/tools=.
-@@ -155,7 +155,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
- # **PATH LABEL="Template Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions'" CHECK="noemptyok perms:rD" **
- # File path to templates directory. For example =/usr/local/foswiki/templates=.
- # This directory must not be web accessible.
--# $Foswiki::cfg{TemplateDir} = '/home/httpd/foswiki/templates';
-+$Foswiki::cfg{TemplateDir} = '/usr/share/foswiki/templates';
- 
- # **PATH LABEL="Locales Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions'" CHECK="noemptyok perms:rD" **
- # File path to locale directory.
-@@ -185,7 +185,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
+@@ -185,7 +185,7 @@ $Foswiki::cfg{TemplateDir} = '/usr/share/foswiki/templates';
  #    * ={WorkingDir}/registration_approvals= - this is used by the
  #      default Foswiki registration process to store registrations that
  #      are pending verification.
--# $Foswiki::cfg{WorkingDir} = '/home/httpd/foswiki/working';
-+$Foswiki::cfg{WorkingDir} = '/var/run/foswiki';
+-$Foswiki::cfg{WorkingDir} = '/var/run/foswiki';
++$Foswiki::cfg{WorkingDir} = '/var/spool/foswiki';
  
  # **PATH LABEL="Safe PATH" CHECK='undefok'**
  # You can override the default PATH setting to control
-@@ -1135,7 +1135,7 @@ $Foswiki::cfg{Log}{Implementation} = 'Foswiki::Logger::PlainFile';
- # **PATH LABEL="Log Directory"**
- # Directory where log files will be written.  Note that the Compatibility
- # Logger does not use this setting by default.
--$Foswiki::cfg{Log}{Dir} = '$Foswiki::cfg{WorkingDir}/logs';
-+$Foswiki::cfg{Log}{Dir} = '/var/log/foswiki';
- 
- # **BOOLEAN LABEL="Obfuscate IP Addresses" DISPLAY_IF="/PlainFile::Obfuscating/i.test({Log}{Implementation})" CHECK="iff:'{Log}{Implementation} =~ /PlainFile::Obfuscating/'"**
- # The Obfuscating logger can either replace IP addresses with a hashed address

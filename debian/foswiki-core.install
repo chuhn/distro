@@ -3,3 +3,4 @@ core/data        /usr/share/foswiki
 core/lib         /usr/share/foswiki
 core/locale      /usr/share/foswiki
 core/templates   /usr/share/foswiki
+core/working     /usr/share/foswiki
