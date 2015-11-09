@@ -1,2 +1,4 @@
 * add logrotate.conf for foswiki-core
 * handle existing topic merge on upgrade
+* /var/lib/foswiki/data/.htpasswd is a rather stupid place for the password file,
+  even though it derives from the defaults.
