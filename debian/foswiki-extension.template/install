@@ -1,0 +1,5 @@
+%PATH%/bin         /usr/share/foswiki
+%PATH%/data        /usr/share/foswiki
+%PATH%/lib         /usr/share/foswiki
+%PATH%/pub         /usr/share/foswiki
+%PATH%/templates   /usr/share/foswiki
