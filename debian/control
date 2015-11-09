@@ -36,6 +36,20 @@ Depends: ${misc:Depends}, apache2
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
+Package: foswiki-famfamfam-contrib
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: famfamfam icons for foswiki
+ 4 great free icon sets for foswiki, by Mark James http://www.famfamfam.com
+
+Package: foswiki-jquery-plugin
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: jQuery JavaScript library for Foswiki
+ Besides jQuery itself, JQueryPlugin comes with a selection of
+ third party plugins that are thought to be essential for
+ modern web applications.
+
 Package: foswiki-pattern-skin
 Provides: foswiki-skin
 Architecture: all
