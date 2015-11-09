@@ -3,3 +3,4 @@
 * /var/lib/foswiki/data/.htpasswd is a rather stupid place for the password file,
   even though it derives from the defaults.
 * don't overwrite (modified) files in /var/lib/foswiki/data or /var/www/foswiki/pub
+* set up initial Wiki data and pub
