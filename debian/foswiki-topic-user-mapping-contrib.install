@@ -1,4 +1,4 @@
-TopicUserMappingContrib/data        /usr/share/foswiki/data
-TopicUserMappingContrib/pub         /usr/share/foswiki/pub
+TopicUserMappingContrib/data        /usr/share/foswiki
+TopicUserMappingContrib/pub         /usr/share/foswiki
 TopicUserMappingContrib/lib         /usr/share/foswiki
 TopicUserMappingContrib/tools       /usr/share/foswiki
