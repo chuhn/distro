@@ -1,3 +1,6 @@
-Extension Naming Scheme:
+# Extension Naming Scheme:
 
-`echo FoswikiExtensionXYZ | sed -e "s/\([a-z]\)\([A-Z][a-z]\)/\1_\2/g;s/\([A-Z]\{3,\}\)\([A-Z]\)/\1_\2/g"`
+`echo FoswikiExtensionXYZ | sed -e "s/\([a-z]\)\([A-Z][a-z]\)/\1_\2/g;s/\([A-Z]\{3,\}\)\([A-Z]\)/\1_\2/g;s/[A-Z]/[a-z]/g"`
+
+# install files
+Paths that do not exist in the extension have to be removed from the install file.
