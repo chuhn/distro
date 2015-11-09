@@ -13,15 +13,37 @@ Architecture: all
 Depends: ${perl:Depends}, ${misc:Depends}, httpd | apache2,
  libcrypt-passwdmd5-perl, foswiki-data-store | foswiki-plain-file-store-contrib,
  foswiki-user-mapping | foswiki-topic-user-mapping-contrib
-Recommends: foswiki-configureplugin
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Recommends: foswiki-configure-plugin
+Description: enterprise wiki and , collaboration platform, knowledge base, document management system
+ Foswiki is an enterprise wiki, suitalbe to run a collaboration platform,
+ knowledge base or document management system.
+ .
+ This package installs a rudimental foswiki w/o default extensions, skin etc.
+
+Package: foswiki
+Architecture: all
+Depends: ${misc:Depends}, foswiki-core
+Recommends:
+Description: enterprise wiki, collaboration platform, knowledge base, document management system
+ Foswiki is an enterprise wiki, suitalbe to run a collaboration platform,
+ knowledge base or document management system.
+ .
+ This package installs all packages for a standard foswiki setup.
 
 Package: foswiki-apache2
 Architecture: all
 Depends: ${misc:Depends}, apache2
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
+
+Package: foswiki-pattern-skin
+Provides: foswiki-skin
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}
+Description: Default skin for foswiki
+ Pattern skin provides a CSS based default look and feel - flexible and
+ W3C compliant. Its layout and color scheme are designed to provide a nice,
+ clean and productive editing environment
 
 Package: foswiki-plain-file-store-contrib
 Provides: foswiki-data-store
