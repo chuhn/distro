@@ -4,9 +4,9 @@ Subject: Tweak default paths for Debian compliance
 
 ---
  core/bin/setlib.cfg   |  5 +----
- core/lib/Foswiki.spec | 12 ++++++------
+ core/lib/Foswiki.spec | 14 +++++++-------
  debian/patches/series |  1 -
- 3 files changed, 7 insertions(+), 11 deletions(-)
+ 3 files changed, 8 insertions(+), 12 deletions(-)
 
 diff --git a/core/bin/setlib.cfg b/core/bin/setlib.cfg
 index a99bc21..012e880 100755
@@ -30,7 +30,7 @@ index a99bc21..012e880 100755
  # Foswiki won't run at all without these:
  my %missing;
 diff --git a/core/lib/Foswiki.spec b/core/lib/Foswiki.spec
-index 3980c0a..6ce152b 100644
+index 3980c0a..7a97128 100644
 --- a/core/lib/Foswiki.spec
 +++ b/core/lib/Foswiki.spec
 @@ -90,12 +90,12 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
@@ -48,6 +48,15 @@ index 3980c0a..6ce152b 100644
  
  # **URLPATH LABEL="Script Url Path for View" CHECK='undefok emptyok notrail' FEEDBACK="icon='ui-icon-check';label='Verify';wizard='ScriptHash';method='verify';auth=1" **
  #! n.b. options should match Pluggables/SCRIPTHASH.pm for dynamic path items
+@@ -124,7 +124,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
+ # See the
+ # [[http://foswiki.org/Support/ApacheConfigGenerator][Apache Config Generator]]
+ # for more information.
+-# $Foswiki::cfg{PubUrlPath} = '/foswiki/pub';
++$Foswiki::cfg{PubUrlPath} = '/foswiki/pub';
+ 
+ #! The following plugin must follow all other {ScriptUrlPaths} items
+ # *SCRIPTHASH*
 @@ -145,7 +145,7 @@ $Foswiki::cfg{PermittedRedirectHostUrls} = '';
  # **PATH LABEL="Data Directory" FEEDBACK="icon='ui-icon-check';label='Validate Permissions'; method='validate_permissions';title='Validate file permissions. WARNING: this may take a long time on a large system'" CHECK="noemptyok perms:rwDpd,'(,v|,pfv)$',r" **
  # Topic files store (file path, not URL). For example =/usr/local/foswiki/data=.
