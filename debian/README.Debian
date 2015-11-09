@@ -18,4 +18,6 @@ Read-only content:
  pub/        - copied from /usr/share/foswiki/pub
  pub/System  - linked from /usr/share/foswiki/pub/System, therefore read-only
 
+/var/spool/foswiki - working directory
+
  -- Christopher Huhn, GSI <C.Huhn@gsi.de>  Fri, 06 Nov 2015 13:43:39 +0100
