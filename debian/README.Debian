@@ -1,0 +1,21 @@
+foswiki for Debian
+------------------
+
+Default file system layout
+
+Read-only content:
+/usr/share/foswiki:
+ bin/
+ lib/
+ locale/
+ templates/
+
+/var/lib/foswiki
+ data/       - copied from /usr/share/foswiki/data
+ data/System - linked from /usr/share/foswiki/data/System, therefore read-only
+
+/var/www/foswiki
+ pub/        - copied from /usr/share/foswiki/pub
+ pub/System  - linked from /usr/share/foswiki/pub/System, therefore read-only
+
+ -- Christopher Huhn, GSI <C.Huhn@gsi.de>  Fri, 06 Nov 2015 13:43:39 +0100
