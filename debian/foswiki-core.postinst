@@ -26,9 +26,11 @@ case "$1" in
         #cp -r /usr/share/foswiki/pub/Main   /var/www/foswiki/pub
         cp -r /usr/share/foswiki/working/.  /var/spool/foswiki
         test -e /var/lib/foswiki/data/System ||
-            ln -s /usr/share/foswiki/data/System /var/lib/foswiki/data
+            ln -s /usr/share/foswiki/data/System /var/lib/foswiki/data/
+        test -d /var/www/foswiki/pub ||
+            mkdir /var/www/foswiki/pub
         test -e /var/www/foswiki/pub/System ||
-            ln -s /usr/share/foswiki/pub/System /var/www/foswiki/pub
+            ln -s /usr/share/foswiki/pub/System /var/www/foswiki/pub/
         touch /var/lib/foswiki/data/.htpasswd
         # fix permissions
         chown -R www-data:www-data /var/lib/foswiki/data /var/www/foswiki/pub \
