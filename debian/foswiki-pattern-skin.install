@@ -1,0 +1,5 @@
+PatternSkin/bin         /usr/share/foswiki
+PatternSkin/data        /usr/share/foswiki
+PatternSkin/lib         /usr/share/foswiki
+PatternSkin/pub         /usr/share/foswiki
+PatternSkin/templates   /usr/share/foswiki
