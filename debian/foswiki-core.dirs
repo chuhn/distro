@@ -2,3 +2,4 @@
 /var/lib/foswiki/pub
 /var/log/foswiki
 /var/spool/foswiki
+/var/www/foswiki
